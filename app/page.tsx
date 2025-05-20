@@ -46,16 +46,6 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center max-w-3xl mx-auto"
         >
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4"
-          >
-            <h2 className="text-2xl md:text-3xl text-primary/80 font-medium mb-2">
-              🎵 Your Musical Mood Companion 🎵
-            </h2>
-          </motion.div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             MoodJukebox
           </h1>
