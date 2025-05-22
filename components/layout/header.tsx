@@ -1,20 +1,9 @@
 "use client";
 
 import { Music } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Header() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <motion.header 
       className="border-b border-border bg-background sticky top-0 z-50"
@@ -32,17 +21,6 @@ export function Header() {
           </motion.div>
           <h1 className="text-xl font-bold tracking-wide">MoodJukebox</h1>
         </div>
-        
-        {mounted && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
-        )}
       </div>
     </motion.header>
   );
